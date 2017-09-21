@@ -476,7 +476,8 @@ var SchemaRegistryFactory = function ($rootScope, $http, $location, $q, $log, Ut
                 id: data.id,            // id
                 schema: data.schema,    // schema - in String - schema i.e. {\"type\":\"record\",\"name\":\"User\",\"fields\":[{\"name\":\"name\",\"type\":\"string\"}]}
                 Schema: JSON.parse(data.schema), // js type | name | doc | fields ...
-                subjectName: data.subject
+                subjectName: data.subject,
+                label: data.label
               };
               CACHE.push(cacheData);
             });
@@ -511,7 +512,8 @@ var SchemaRegistryFactory = function ($rootScope, $http, $location, $q, $log, Ut
               id: subjectInformation.id,
               schema: subjectInformation.schema, // this is text
               Schema: JSON.parse(subjectInformation.schema), // this is json
-              subjectName: subjectInformation.subject
+              subjectName: subjectInformation.subject,
+              label: subjectInformation.label
             };
             $log.debug("  pipeline: " + subjectName + "/" + subjectVersion + " in [ " + (new Date().getTime() - start) + " ] msec");
             deferred.resolve(subjectInformationWithMetadata);

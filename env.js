@@ -7,9 +7,9 @@ var clusters = [
   },
   {
     NAME: "dev",
-    SCHEMA_REGISTRY: "http://localhost:8383",
+    SCHEMA_REGISTRY: "http://localhost/schema-registry",
     COLOR: "red", // optional
-    allowGlobalConfigChanges: true, // optional
+    allowGlobalConfigChanges: false, // optional
     //allowTransitiveCompatibilities: true        // if using a Confluent Platform release >= 3.1.1 uncomment this line
   }
 ];

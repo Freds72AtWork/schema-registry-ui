@@ -2,13 +2,14 @@
   <md-toolbar class="md-hue-2">
     <div class="md-toolbar-tools">
       <h3>
-        <span>{{allSchemas.length}} Schemas</span>
+        <span>{{allSchemas.length}} Streams</span>
       </h3>
       <span flex></span>
       <a md-ink-ripple ng-show="true" ng-href="#/cluster/{{cluster}}/schema/new"
          class="md-raised md-primary md-button md-ink-ripple blue"
          type="button"
-         aria-label="new connector">New</a>
+         aria-label="new connector"
+         disabled="true">New</a>
     </div>
   </md-toolbar>
   <md-content style="background-color:white;overflow:hidden;">
@@ -24,7 +25,7 @@
 
         <!-- cute / sexy schema bar -->
         <div class="md-list-item-text" layout="column">
-          <h4>{{schema.subjectName}}</h4>
+          <h4>{{schema.label}}</h4>
           <p style="font-size:12px;" ng-if="schema.compatibilityLevel">
            Compatibility level is set to {{schema.compatibilityLevel}}
           </p>
